@@ -10,10 +10,10 @@ def process_input(line):
     num_metadatas = nums[index + 1]
 
     last_index = index + 2
-    for i in range(num_children):
+    for _ in range(num_children):
       last_index = process_tree_rec(last_index)
 
-    for i in range(num_metadatas):
+    for _ in range(num_metadatas):
       metadata_sum[0] += nums[last_index]
       last_index += 1
 
@@ -23,7 +23,6 @@ def process_input(line):
   return metadata_sum[0]
 
 
-
 if __name__ == '__main__':
-  line = [line.rstrip('\n') for line in open('day-07.input')]
+  line = [line.rstrip('\n') for line in open('day-08.input')]
   print(process_input(line[0]))
